@@ -1,113 +1,262 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  ArrowRight,
+  Building2,
+  Globe,
+  Package,
+  Plane,
+  Truck,
+} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Component2 from "./component2";
+import Component3 from "./component3";
 
-export default function Home() {
+export default function Component() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center space-x-8">
+              <Link href="/" className="text-2xl font-bold text-indigo-600">
+                MACROBANK
+              </Link>
+              <div className="hidden md:flex space-x-6">
+                <Link
+                  href="#services"
+                  className="text-slate-600 hover:text-indigo-600 transition-colors"
+                >
+                  Услуги
+                </Link>
+                <Link
+                  href="#about"
+                  className="text-slate-600 hover:text-indigo-600 transition-colors"
+                >
+                  О Нас
+                </Link>
+                <Link
+                  href="#consultation"
+                  className="text-slate-600 hover:text-indigo-600 transition-colors"
+                >
+                  Консультация
+                </Link>
+                <Link
+                  href="#contacts"
+                  className="text-slate-600 hover:text-indigo-600 transition-colors"
+                >
+                  Контакты
+                </Link>
+              </div>
+            </div>
+            <div className="hidden md:flex space-x-4">
+              <Button variant="ghost">Войти</Button>
+              <Button className="bg-indigo-600 hover:bg-indigo-700">
+                Зарегистрироваться
+              </Button>
+            </div>
+          </div>
         </div>
-      </div>
+      </nav>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Hero Section */}
+      <motion.section
+        className="pt-32 pb-16 px-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <motion.h1
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                Международные платежи и перевозки
+              </motion.h1>
+              <motion.p
+                className="text-xl text-slate-600"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                Надежные решения для импортеров: от носков до автомобилей.
+                Безопасные платежи и доставка из любой точки мира.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <Button className="bg-indigo-600 hover:bg-indigo-700 text-lg px-8 py-6">
+                  Начать сейчас
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </motion.div>
+            </div>
+            <motion.div
+              className="relative h-[400px]"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <video
+                src="/hero-video.mp4"
+                width={600}
+                height={400}
+                className="rounded-md"
+                autoPlay
+                loop
+                muted
+              />
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Consultation Form */}
+      <section className="py-16 px-4 bg-white" id="consultation">
+        <div className="container mx-auto max-w-4xl">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Получите бесплатную консультацию
+            </h2>
+            <p className="text-slate-600">
+              Оставьте свои контактные данные, и наш специалист свяжется с вами
+              в ближайшее время
+            </p>
+          </motion.div>
+          <motion.div
+            className="bg-white rounded-2xl shadow-xl p-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <form className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="name">Имя</Label>
+                <Input id="name" placeholder="Введите ваше имя" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="phone">Телефон</Label>
+                <Input id="phone" type="tel" placeholder="+7 (___) ___-__-__" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">E-mail</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="example@domain.com"
+                />
+              </div>
+              <div className="flex items-center space-x-2">
+                <Checkbox id="privacy" />
+                <label htmlFor="privacy" className="text-sm text-slate-600">
+                  Я согласен с политикой конфиденциальности
+                </label>
+              </div>
+              <Button className="w-full bg-indigo-600 hover:bg-indigo-700">
+                Получить консультацию
+              </Button>
+            </form>
+          </motion.div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      {/* Services */}
+      <section className="py-16 px-4" id="services">
+        <div className="container mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Наши услуги
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">
+              Комплексные решения для вашего бизнеса: от международных платежей
+              до доставки товаров
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Международные платежи",
+                description: "Безопасные и быстрые платежи в любую точку мира",
+                icon: Globe,
+              },
+              {
+                title: "Морские перевозки",
+                description: "Контейнерные перевозки из любого порта",
+                icon: Building2,
+              },
+              {
+                title: "Авиаперевозки",
+                description: "Срочная доставка воздушным транспортом",
+                icon: Plane,
+              },
+              {
+                title: "Наземная доставка",
+                description: "Автомобильные и железнодорожные перевозки",
+                icon: Truck,
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <Card className="group hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-6">
+                    <div className="mb-6 w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                      <service.icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2 text-slate-900">
+                      {service.title}
+                    </h3>
+                    <p className="text-slate-600">{service.description}</p>
+                    <Button
+                      variant="link"
+                      className="mt-4 p-0 text-indigo-600 hover:text-indigo-700"
+                    >
+                      Подробнее
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Component2 />
+      <Component3 />
+    </div>
   );
 }
