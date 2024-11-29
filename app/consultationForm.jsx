@@ -3,9 +3,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
+import Cost from "./cost";
 const ConsultationForm = () => {
   return (
-    <section className="py-16 px-4 bg-white" id="consultation">
+    <section
+      className="py-16 mt-10 px-4 bg-[url('/bg/bgconsult.svg')] bg-no-repeat bg-cover border z-50"
+      id="consultation"
+    >
       <div className="container mx-auto max-w-4xl">
         <motion.div
           className="text-center mb-12"
@@ -14,10 +18,10 @@ const ConsultationForm = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl font-bold text-slate-100 mb-4">
             Получите бесплатную консультацию
           </h2>
-          <p className="text-slate-600">
+          <p className="text-slate-300">
             Оставьте свои контактные данные, и наш специалист свяжется с вами в
             ближайшее время
           </p>
@@ -54,6 +58,7 @@ const ConsultationForm = () => {
           </form>
         </motion.div>
       </div>
+      <Cost />
     </section>
   );
 };

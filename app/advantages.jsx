@@ -59,7 +59,7 @@ const Advantages = () => {
       whileInView="show"
       viewport={{ once: true }}
       variants={container}
-      className="space-y-12"
+      className="space-y-12 mx-auto container "
     >
       <div className="text-center space-y-4">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">

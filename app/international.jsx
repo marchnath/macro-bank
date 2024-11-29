@@ -7,7 +7,7 @@ const International = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="mt-24 relative h-screen flex items-center max-h-[760px]"
+      className="mt-24 relative h-screen flex items-center max-h-[760px] mx-auto container"
     >
       {/* Background Image */}
       <div className="absolute inset-0">
