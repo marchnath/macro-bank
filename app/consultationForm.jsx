@@ -7,10 +7,10 @@ import Cost from "./cost";
 const ConsultationForm = () => {
   return (
     <section
-      className="py-16 mt-10 px-4 bg-[url('/bg/bgconsult.svg')] bg-no-repeat bg-cover border z-50"
+      className="pt-16 mt-10 px-4 bg-[url('/bg/bgconsult.svg')] bg-no-repeat bg-cover border z-50"
       id="consultation"
     >
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-2xl">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}

@@ -8,7 +8,7 @@ const Partners = () => {
   };
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+    <section className="w-full py-4 md:py-6 lg:py-10 bg-gray-100">
       <motion.div
         className="container px-4 md:px-6 mx-auto"
         initial={fadeIn.initial}

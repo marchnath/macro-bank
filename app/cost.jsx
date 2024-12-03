@@ -10,7 +10,7 @@ const Cost = () => {
     transition: { duration: 0.5 },
   };
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full py-10 md:py-16 lg:py-20">
       <motion.div
         className="container px-4 md:px-6 mx-auto"
         initial={fadeIn.initial}
@@ -18,10 +18,16 @@ const Cost = () => {
         transition={fadeIn.transition}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold text-center mb-6">
           Узнать о стоимости
         </h2>
-        <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+        <div className="text-center mb-8">
+          <p className="text-gray-700 max-w-2xl mx-auto">
+            Заполните форму ниже и получите расчет стоимости доставки вашего
+            груза в течение 30 минут
+          </p>
+        </div>
+        <div className="max-w-2xl mx-auto p-6 bg-white rounded-2xl border shadow-lg">
           <div className="grid gap-6">
             <div className="space-y-2">
               <Label htmlFor="weight">Вес груза (кг)</Label>

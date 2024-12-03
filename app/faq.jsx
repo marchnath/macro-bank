@@ -13,19 +13,23 @@ const FAQ = () => {
     transition: { duration: 0.5 },
   };
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full py-10 md:py-16 lg:py-20">
       <motion.div
-        className="container px-4 md:px-6 mx-auto"
+        className="container  px-4 md:px-6 mx-auto"
         initial={fadeIn.initial}
         whileInView={fadeIn.animate}
         transition={fadeIn.transition}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-center mb-12 ">
+        <h2 className="text-3xl font-bold text-center mb-6 ">
           Ответы на часто вопросы
         </h2>
+        <p className="text-center text-slate-600 mb-12">
+          Здесь вы найдете ответы на самые распространенные вопросы о наших
+          услугах
+        </p>{" "}
         <Accordion type="single" collapsible className="max-w-3xl mx-auto">
-          <AccordionItem value="item-1">
+          <AccordionItem value="item-1" className="">
             <AccordionTrigger>
               Как рассчитывается стоимость доставки?
             </AccordionTrigger>
