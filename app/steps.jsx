@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 const Steps = () => {
   const container = {
     hidden: { opacity: 0 },
@@ -26,15 +27,15 @@ const Steps = () => {
         variants={container}
         className="mt-24 space-y-12 max-w-2xl mx-auto"
       >
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl  text-center">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
           Шаги
         </h2>
         <div className="relative">
           <div
             className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-yellow-500"
             style={{
-              height: "calc(100% - 48px)", // 48px accounts for the circle height (size-12 = 3rem = 48px)
-              top: "24px", // Centers the line by moving it down half the circle height
+              height: "calc(100% - 48px)",
+              top: "24px",
             }}
           />
           <div className="space-y-16 ">
@@ -42,17 +43,28 @@ const Steps = () => {
               {
                 step: 1,
                 text: "Оформите заявку на сайте любым удобным способом или позвоните нам",
+                icon: "/steps/application.png",
               },
               {
                 step: 2,
                 text: "По запросу предоставьте необходимые нашему менеджеру данные и документы для расчета стоимости услуги",
+                icon: "/steps/weight.png",
               },
               {
                 step: 3,
                 text: "Выберите оптимальное для вас решение по срокам и стоимости",
+                icon: "/steps/airport.png",
               },
-              { step: 4, text: "Подпишите договор и заявку на перевозку" },
-              { step: 5, text: "Получите товар в заявленные сроки" },
+              {
+                step: 4,
+                text: "Подпишите договор и заявку на перевозку",
+                icon: "/steps/signature.png",
+              },
+              {
+                step: 5,
+                text: "Получите товар в заявленные сроки",
+                icon: "/steps/supplier.png",
+              },
             ].map((stepData, index) => (
               <motion.div
                 key={index}
@@ -64,15 +76,39 @@ const Steps = () => {
                     {stepData.step}
                   </div>
                 </div>
-                <div
-                  className={` w-1/2 ${
-                    index % 2 === 0 ? "pr-16 text-right" : "pl-16 ml-auto"
-                  }`}
-                >
-                  <p className="text-lg font-medium  text-gray-900">
-                    {stepData.text}
-                  </p>
-                </div>
+                {index % 2 === 0 ? (
+                  <>
+                    <div className="w-1/2 pr-16 text-right">
+                      <p className="text-lg font-medium text-gray-900">
+                        {stepData.text}
+                      </p>
+                    </div>
+                    <div className="w-1/2 pl-16">
+                      <Image
+                        src={stepData.icon}
+                        width={100}
+                        height={100}
+                        alt={`Step ${stepData.step}`}
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="w-1/2 sm:pl-16  md:pl-36">
+                      <Image
+                        src={stepData.icon}
+                        width={100}
+                        height={100}
+                        alt={`Step ${stepData.step}`}
+                      />
+                    </div>
+                    <div className="w-1/2 pl-16 text-left">
+                      <p className="text-lg font-medium text-gray-900">
+                        {stepData.text}
+                      </p>
+                    </div>
+                  </>
+                )}
               </motion.div>
             ))}
           </div>
