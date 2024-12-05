@@ -19,7 +19,7 @@ const Services = () => {
     transition: { duration: 0.5 },
   };
   return (
-    <section className="py-16 px-4" id="services">
+    <section className="py-8 sm:py-16 px-4" id="services">
       <div className="container mx-auto">
         <motion.div
           className="text-center mb-16"

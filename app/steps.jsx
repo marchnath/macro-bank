@@ -25,7 +25,7 @@ const Steps = () => {
         whileInView="show"
         viewport={{ once: true }}
         variants={container}
-        className="mt-24 space-y-12 max-w-2xl mx-auto"
+        className="mt-24 space-y-12 max-w-2xl px-2 mx-auto"
       >
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
           Шаги
@@ -78,16 +78,17 @@ const Steps = () => {
                 </div>
                 {index % 2 === 0 ? (
                   <>
-                    <div className="w-1/2 pr-16 text-right">
-                      <p className="text-lg font-medium text-gray-900">
+                    <div className="w-1/2 pr-8 sm:pr-16 text-right">
+                      <p className="text-sm sm:text-base md:text-lg font-medium text-gray-900">
                         {stepData.text}
                       </p>
                     </div>
                     <div className="w-1/2 pl-16">
                       <Image
                         src={stepData.icon}
-                        width={100}
-                        height={100}
+                        width={50}
+                        height={50}
+                        className="sm:w-[100px] sm:h-[100px]"
                         alt={`Step ${stepData.step}`}
                       />
                     </div>
@@ -97,13 +98,14 @@ const Steps = () => {
                     <div className="w-1/2 sm:pl-16  md:pl-36">
                       <Image
                         src={stepData.icon}
-                        width={100}
-                        height={100}
+                        width={50}
+                        height={50}
+                        className="sm:w-[100px] sm:h-[100px] ml-10"
                         alt={`Step ${stepData.step}`}
                       />
                     </div>
-                    <div className="w-1/2 pl-16 text-left">
-                      <p className="text-lg font-medium text-gray-900">
+                    <div className="w-1/2 pl-8 sm:pl-16 text-left">
+                      <p className="text-sm sm:text-base md:text-lg font-medium text-gray-900">
                         {stepData.text}
                       </p>
                     </div>

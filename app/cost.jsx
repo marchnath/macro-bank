@@ -18,11 +18,11 @@ const Cost = () => {
         transition={fadeIn.transition}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold text-center mb-6">
+        <h2 className="text-3xl text-white sm:text-black font-bold text-center mb-6">
           Узнать о стоимости
         </h2>
         <div className="text-center mb-8">
-          <p className="text-gray-700 max-w-2xl mx-auto">
+          <p className="text-gray-100 sm:text-gray-700 max-w-2xl mx-auto">
             Заполните форму ниже и получите расчет стоимости доставки вашего
             груза в течение 30 минут
           </p>

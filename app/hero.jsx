@@ -17,16 +17,16 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="pt-32 pb-16 px-4"
+      className="pt-28 sm:pt-32 pb-16 px-4"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-6 md:space-y-8">
             <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -34,7 +34,7 @@ const Hero = () => {
               Международные платежи и перевозки
             </motion.h1>
             <motion.p
-              className="text-xl text-slate-600"
+              className="md:text-xl sm:text-lg text-slate-600"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -47,7 +47,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <Button className="bg-yellow-500 hover:bg-yellow-600 text-lg px-8 py-6 text-black">
+              <Button className="bg-yellow-500 hover:bg-yellow-600 text-lg px-6 py-4 sm:px-8 sm:py-6 text-black">
                 Начать сейчас
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>

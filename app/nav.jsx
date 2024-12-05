@@ -17,9 +17,15 @@ const Nav = () => {
           <div className="flex items-center space-x-8">
             <Link
               href="/"
-              className="text-2xl flex items-center font-bold gap-x-2"
+              className="text-xl sm:text-2xl flex items-center font-bold gap-x-1 sm:gap-x-2"
             >
-              <Image src="/logo.png" width={50} height={50} alt="logo" />
+              <Image
+                src="/logo.png"
+                width={50}
+                height={50}
+                alt="logo"
+                className="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px]"
+              />
               GlobalCashWay
             </Link>
             <div className="hidden md:flex space-x-6">
