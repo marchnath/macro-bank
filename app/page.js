@@ -5,12 +5,15 @@ import Hero from "./hero";
 import ConsultationForm from "./consultationForm";
 import Services from "./services";
 import Advantages from "./advantages";
+import Advantages2 from "./advantages2";
 import International from "./international";
 import Steps from "./steps";
 import Cost from "./cost";
 import FAQ from "./faq";
 import Partners from "./partners";
 import Footer from "./footer";
+import Hero2 from "./hero2";
+import Service2 from "./service2";
 
 export default function Component() {
   return (
@@ -19,29 +22,32 @@ export default function Component() {
       <Nav />
 
       {/* Hero Section */}
-      <Hero />
+      {/* <Hero /> */}
+      <Hero2 />
 
       {/* Services */}
-      <Services />
+      <Service2 />
+      {/* <Services /> */}
       {/* Features Section */}
-      <Advantages />
+      {/* <Advantages /> */}
+      <Advantages2 />
       {/* International Section */}
-      <International />
+      {/* <International />
 
-      <Steps />
+      <Steps /> */}
 
       {/* Consultation Form */}
 
-      <ConsultationForm />
+      {/* <ConsultationForm /> */}
 
       {/* Calculator Section */}
       {/* <Cost /> */}
 
       {/* FAQ Section */}
-      <FAQ />
+      {/* <FAQ /> */}
 
       {/* Collaboration Section */}
-      <Partners />
+      {/* <Partners /> */}
 
       {/* Footer */}
       <Footer />

@@ -59,7 +59,7 @@ const Nav = () => {
             <Button variant="ghost">Войти</Button>
             <Button
               size="lg"
-              className="bg-yellow-500 hover:bg-yellow-600 text-black py-6"
+              className="bg-yellow-500  rounded-none hover:bg-yellow-600 text-black py-2"
             >
               Зарегистрироваться
             </Button>
