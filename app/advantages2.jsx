@@ -70,7 +70,7 @@ const Advantages2 = () => {
       id="advantages"
     >
       <div className="space-y-4">
-        <p className=" max-w-[700px] text-slate-800 font-bold text-2xl -mb-6 sm:-mb-3    md:text-3xl">
+        <p className=" max-w-[700px] text-slate-800 font-bold text-lg sm:text-xl -mb-6 sm:-mb-3    md:text-3xl">
           Мы предлагаем следующие преимущества и особенности:
         </p>
       </div>

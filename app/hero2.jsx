@@ -86,7 +86,7 @@ export default function Hero2() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="mb-4 text-4xl font-bold text-white sm:text-4xl md:text-5xl  lg:text-6xl"
+                className="mb-4 text-4xl -mt-16 font-bold text-white sm:text-4xl md:text-5xl  lg:text-6xl"
               >
                 {heroContent[currentIndex].title}
               </motion.h1>
@@ -94,7 +94,7 @@ export default function Hero2() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="max-w-2xl text-lg text-white/90 sm:text-lg md:text-xl"
+                className="max-w-2xl  text-white/90 sm:text-lg md:text-xl"
               >
                 {heroContent[currentIndex].subtitle}
                 <div className="flex flex-wrap justify-start gap-4 mt-4">
