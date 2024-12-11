@@ -65,7 +65,6 @@ const Nav = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
             onClick={toggleMenu}
