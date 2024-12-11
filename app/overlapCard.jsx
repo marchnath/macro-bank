@@ -76,8 +76,8 @@ const OverlapCard = () => {
   };
 
   return (
-    <Card className="absolute bottom-20 !z-50 rounded-none max-w-5xl mx-auto left-0 right-0 bg-white p-6">
-      <div className="mb-4 flex gap-8 border-b pb-4">
+    <Card className="absolute bottom-0 sm:bottom-20 z-30 rounded-none max-w-5xl mx-auto left-0 right-0 bg-white p-6">
+      <div className="mb-4 grid grid-cols-2 md:grid-cols-4 gap-8 border-b pb-4">
         <button
           className={`flex items-center border-r px-4 py-1 text-indigo-800 font-bold hover:text-indigo-700 ${
             activeTab === "calculate"

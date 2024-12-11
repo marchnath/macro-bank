@@ -66,14 +66,12 @@ const Advantages2 = () => {
       whileInView="show"
       viewport={{ once: true }}
       variants={container}
-      className="space-y-12 mx-auto container px-4 "
+      className="space-y-12 mt-10 sm:mt-20 mx-auto container px-4 "
+      id="advantages"
     >
-      <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          Преимущества и особенности
-        </h2>
-        <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
-          Надежный партнер для ваших международных перевозок и платежей
+      <div className="space-y-4">
+        <p className=" max-w-[700px] text-slate-800 font-bold text-2xl -mb-6 sm:-mb-3    md:text-3xl">
+          Мы предлагаем следующие преимущества и особенности:
         </p>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

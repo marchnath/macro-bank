@@ -11,23 +11,23 @@ const Nav = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
-      <div className="container mx-auto px-4 py-2">
+    <nav className="fixed top-0 w-full  bg-white/80 backdrop-blur-md z-50 border-b">
+      <div className="container mx-auto px-4 ">
         <div className="flex h-16 items-center justify-between">
+          <Link
+            href="/"
+            className="text-xl sm:text-2xl flex items-center font-bold gap-x-1 sm:gap-x-2"
+          >
+            <Image
+              src="/logo.png"
+              width={50}
+              height={50}
+              alt="logo"
+              className="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px]"
+            />
+            GlobalCashWay
+          </Link>
           <div className="flex items-center space-x-8">
-            <Link
-              href="/"
-              className="text-xl sm:text-2xl flex items-center font-bold gap-x-1 sm:gap-x-2"
-            >
-              <Image
-                src="/logo.png"
-                width={50}
-                height={50}
-                alt="logo"
-                className="w-[35px] h-[35px] sm:w-[50px] sm:h-[50px]"
-              />
-              GlobalCashWay
-            </Link>
             <div className="hidden md:flex space-x-6">
               <Link
                 href="#services"
@@ -36,17 +36,17 @@ const Nav = () => {
                 Услуги
               </Link>
               <Link
-                href="#about"
+                href="#advantages"
                 className="text-slate-600 hover:text-indigo-600 transition-colors"
               >
-                О Нас
+                Преимущества
               </Link>
-              <Link
+              {/* <Link
                 href="#consultation"
                 className="text-slate-600 hover:text-indigo-600 transition-colors"
               >
                 Консультация
-              </Link>
+              </Link> */}
               <Link
                 href="#contacts"
                 className="text-slate-600 hover:text-indigo-600 transition-colors"
@@ -59,7 +59,7 @@ const Nav = () => {
             <Button variant="ghost">Войти</Button>
             <Button
               size="lg"
-              className="bg-yellow-500  rounded-none hover:bg-yellow-600 text-black py-2"
+              className="bg-yellow-500  rounded-none hover:bg-indigo-600 hover:text-white text-black py-2"
             >
               Зарегистрироваться
             </Button>
@@ -84,7 +84,7 @@ const Nav = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-[4rem] bg-opacity-95  -right-2 w-[250px] h-[420px] bg-white shadow-lg rounded-lg border md:hidden"
+            className="absolute top-[4rem] bg-opacity-95  -right-2 w-[250px]  bg-slate-100 shadow-lg  border md:hidden"
           >
             <div className="flex flex-col p-4 space-y-4">
               <Link
@@ -95,19 +95,19 @@ const Nav = () => {
                 Услуги
               </Link>
               <Link
-                href="#about"
+                href="#advantages"
                 className="text-slate-600 hover:text-indigo-600 transition-colors"
                 onClick={toggleMenu}
               >
-                О Нас
+                Преимущества
               </Link>
-              <Link
+              {/* <Link
                 href="#consultation"
                 className="text-slate-600 hover:text-indigo-600 transition-colors"
                 onClick={toggleMenu}
               >
                 Консультация
-              </Link>
+              </Link> */}
               <Link
                 href="#contacts"
                 className="text-slate-600 hover:text-indigo-600 transition-colors"
@@ -122,7 +122,7 @@ const Nav = () => {
                 </Button>
                 <Button
                   size="lg"
-                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-black"
+                  className="w-full bg-yellow-500 rounded-none hover:bg-yellow-600 text-black"
                   onClick={toggleMenu}
                 >
                   Зарегистрироваться

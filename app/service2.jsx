@@ -3,7 +3,7 @@ import { servicesData } from "./data/service";
 
 export default function Service2() {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <section id="services" className="container mx-auto px-4 py-12 md:-mt-20">
       <div className="space-y-12 md:space-y-24">
         {servicesData.map((service, index) => (
           <div
@@ -35,13 +35,13 @@ export default function Service2() {
               <h2 className="text-2xl md:text-3xl font-bold text-primary">
                 {service.title}
               </h2>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground sm:text-lg">
                 {service.description}
               </p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

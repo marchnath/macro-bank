@@ -6,6 +6,15 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdOutlineEmail } from "react-icons/md";
 
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import ConsultForm from "./consultForm";
+
 import OverlapCard from "./overlapCard";
 
 const heroContent = [
@@ -37,14 +46,25 @@ export default function Hero2() {
 
   return (
     <div className="relative min-h-screen ">
-      {/* Fixed Contact Button */}
-      <Button className="fixed  rounded-none -right-2 top-1/3 z-50 text-black -translate-y-1/2 -rotate-90 bg-yellow-500  hover:bg-yellow-600">
-        Связаться
-        <MdOutlineEmail className="font-bold" />
-      </Button>
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button className="fixed rounded-none md:text-lg -right-12  md:-right-8 top-1/3 z-40 text-black -translate-y-1/2 -rotate-90 bg-yellow-500 hover:bg-indigo-600 hover:text-white">
+            Связаться
+            <MdOutlineEmail className="font-bold" />
+          </Button>
+        </SheetTrigger>
+        <SheetContent className="w-full sm:max-w-xl">
+          <SheetHeader>
+            <SheetTitle className="text-2xl font-bold text-center">
+              Получите бесплатную консультацию
+            </SheetTitle>
+          </SheetHeader>
+          <ConsultForm />
+        </SheetContent>
+      </Sheet>
 
       {/* Hero Section */}
-      <div className="relative h-screen overflow-hidden">
+      <div className="relative h-[840px] md:h-screen overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -66,7 +86,7 @@ export default function Hero2() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="mb-4 text-4xl font-bold text-white sm:text-5xl lg:text-6xl"
+                className="mb-4 text-4xl font-bold text-white sm:text-4xl md:text-5xl  lg:text-6xl"
               >
                 {heroContent[currentIndex].title}
               </motion.h1>
@@ -74,7 +94,7 @@ export default function Hero2() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="max-w-2xl text-lg text-white/90 sm:text-xl"
+                className="max-w-2xl text-lg text-white/90 sm:text-lg md:text-xl"
               >
                 {heroContent[currentIndex].subtitle}
                 <div className="flex flex-wrap justify-start gap-4 mt-4">
